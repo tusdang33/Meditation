@@ -36,7 +36,7 @@ class AppRouter {
         return null;
       }
 
-      return RouteName.login;
+      return RouteName.topic;
     },
     routes: [
       GoRoute(

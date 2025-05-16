@@ -22,4 +22,4 @@ class TokenService {
   bool hasToken() {
     return getToken() != null;
   }
-} 
+}

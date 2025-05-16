@@ -10,8 +10,9 @@ class TopicRepositoryImpl extends TopicRepository {
   Future<Resource<List<Topic>>> getTopics() async {
     try {
       await Future.delayed(const Duration(seconds: 2));
-      final jsonContent =
-          await rootBundle.loadString("mock/topics/topics.json");
+      final jsonContent = await rootBundle.loadString(
+        "mock/topics/topics.json",
+      );
       final List<dynamic> jsonData = jsonDecode(jsonContent);
       return Success(jsonData.map((e) => Topic.fromJson(e)).toList());
     } catch (e) {

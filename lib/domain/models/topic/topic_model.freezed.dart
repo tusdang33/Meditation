@@ -21,9 +21,10 @@ Topic _$TopicFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Topic {
-  String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
+  String get color => throw _privateConstructorUsedError;
+  String get titleColor => throw _privateConstructorUsedError;
 
   /// Serializes this Topic to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,7 +40,7 @@ abstract class $TopicCopyWith<$Res> {
   factory $TopicCopyWith(Topic value, $Res Function(Topic) then) =
       _$TopicCopyWithImpl<$Res, Topic>;
   @useResult
-  $Res call({String id, String name, String description});
+  $Res call({String title, String thumbnail, String color, String titleColor});
 }
 
 /// @nodoc
@@ -57,26 +58,32 @@ class _$TopicCopyWithImpl<$Res, $Val extends Topic>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? description = null,
+    Object? title = null,
+    Object? thumbnail = null,
+    Object? color = null,
+    Object? titleColor = null,
   }) {
     return _then(
       _value.copyWith(
-            id:
-                null == id
-                    ? _value.id
-                    : id // ignore: cast_nullable_to_non_nullable
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
                         as String,
-            name:
-                null == name
-                    ? _value.name
-                    : name // ignore: cast_nullable_to_non_nullable
+            thumbnail:
+                null == thumbnail
+                    ? _value.thumbnail
+                    : thumbnail // ignore: cast_nullable_to_non_nullable
                         as String,
-            description:
-                null == description
-                    ? _value.description
-                    : description // ignore: cast_nullable_to_non_nullable
+            color:
+                null == color
+                    ? _value.color
+                    : color // ignore: cast_nullable_to_non_nullable
+                        as String,
+            titleColor:
+                null == titleColor
+                    ? _value.titleColor
+                    : titleColor // ignore: cast_nullable_to_non_nullable
                         as String,
           )
           as $Val,
@@ -92,7 +99,7 @@ abstract class _$$TopicImplCopyWith<$Res> implements $TopicCopyWith<$Res> {
   ) = __$$TopicImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name, String description});
+  $Res call({String title, String thumbnail, String color, String titleColor});
 }
 
 /// @nodoc
@@ -109,26 +116,32 @@ class __$$TopicImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? description = null,
+    Object? title = null,
+    Object? thumbnail = null,
+    Object? color = null,
+    Object? titleColor = null,
   }) {
     return _then(
       _$TopicImpl(
-        id:
-            null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
                     as String,
-        name:
-            null == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
+        thumbnail:
+            null == thumbnail
+                ? _value.thumbnail
+                : thumbnail // ignore: cast_nullable_to_non_nullable
                     as String,
-        description:
-            null == description
-                ? _value.description
-                : description // ignore: cast_nullable_to_non_nullable
+        color:
+            null == color
+                ? _value.color
+                : color // ignore: cast_nullable_to_non_nullable
+                    as String,
+        titleColor:
+            null == titleColor
+                ? _value.titleColor
+                : titleColor // ignore: cast_nullable_to_non_nullable
                     as String,
       ),
     );
@@ -139,24 +152,27 @@ class __$$TopicImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TopicImpl implements _Topic {
   const _$TopicImpl({
-    required this.id,
-    required this.name,
-    required this.description,
+    required this.title,
+    required this.thumbnail,
+    required this.color,
+    required this.titleColor,
   });
 
   factory _$TopicImpl.fromJson(Map<String, dynamic> json) =>
       _$$TopicImplFromJson(json);
 
   @override
-  final String id;
+  final String title;
   @override
-  final String name;
+  final String thumbnail;
   @override
-  final String description;
+  final String color;
+  @override
+  final String titleColor;
 
   @override
   String toString() {
-    return 'Topic(id: $id, name: $name, description: $description)';
+    return 'Topic(title: $title, thumbnail: $thumbnail, color: $color, titleColor: $titleColor)';
   }
 
   @override
@@ -164,15 +180,18 @@ class _$TopicImpl implements _Topic {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TopicImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.description, description) ||
-                other.description == description));
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.titleColor, titleColor) ||
+                other.titleColor == titleColor));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, description);
+  int get hashCode =>
+      Object.hash(runtimeType, title, thumbnail, color, titleColor);
 
   /// Create a copy of Topic
   /// with the given fields replaced by the non-null parameter values.
@@ -190,19 +209,22 @@ class _$TopicImpl implements _Topic {
 
 abstract class _Topic implements Topic {
   const factory _Topic({
-    required final String id,
-    required final String name,
-    required final String description,
+    required final String title,
+    required final String thumbnail,
+    required final String color,
+    required final String titleColor,
   }) = _$TopicImpl;
 
   factory _Topic.fromJson(Map<String, dynamic> json) = _$TopicImpl.fromJson;
 
   @override
-  String get id;
+  String get title;
   @override
-  String get name;
+  String get thumbnail;
   @override
-  String get description;
+  String get color;
+  @override
+  String get titleColor;
 
   /// Create a copy of Topic
   /// with the given fields replaced by the non-null parameter values.

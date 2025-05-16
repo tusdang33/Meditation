@@ -62,7 +62,7 @@ class WelcomePage extends StatelessWidget {
               ),
             ],
           ),
-          potrait: Column(
+          portrait: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

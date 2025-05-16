@@ -18,4 +18,4 @@ class SignUpSubmitted extends SignUpEvent {
     this.confirmPassword,
     this.isPrivacyPolicyAccepted,
   );
-} 
+}

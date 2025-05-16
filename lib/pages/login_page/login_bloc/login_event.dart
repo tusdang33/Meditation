@@ -12,5 +12,3 @@ class LoginSubmitted extends LoginEvent {
 
   LoginSubmitted(this.email, this.password);
 }
-
-

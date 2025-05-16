@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ],
                       ),
-                      potrait: SizedBox.expand(
+                      portrait: SizedBox.expand(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [

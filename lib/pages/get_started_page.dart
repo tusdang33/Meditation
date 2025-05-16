@@ -45,7 +45,7 @@ class GetStartedPage extends StatelessWidget {
               ),
             ],
           ),
-          potrait: Stack(
+          portrait: Stack(
             children: [
               _GetStartedBackground(),
               _GetStartedHeader(),

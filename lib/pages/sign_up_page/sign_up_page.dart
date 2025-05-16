@@ -145,7 +145,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                         ],
                       ),
-                      potrait: SizedBox.expand(
+                      portrait: SizedBox.expand(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -314,7 +314,8 @@ class _SignUpHeader extends StatelessWidget {
             28.0,
           ).copyWith(color: Colors.black, height: 1.35),
         ),
-        if (state is SignUpLoading && (state as SignUpLoading).isFacebookLoading)
+        if (state is SignUpLoading &&
+            (state as SignUpLoading).isFacebookLoading)
           const CircularProgressIndicator(color: kColorPrimary)
         else
           MeditationButton(
