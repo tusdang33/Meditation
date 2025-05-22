@@ -42,3 +42,19 @@ class LoginPageStrings {
   static const String loginHintEmail = 'Email Address';
   static const String loginHintPassword = 'Password';
 }
+
+class TopicPageStrings {
+  static const String title = 'What Brings you\nto Silent Moon?';
+  static const String subtitle = 'choose a topic to focuse on:';
+}
+
+class SetTimePageStrings {
+  static const String pickTimeTitle = 'What time would you\nlike to meditate?';
+  static const String pickTimeSubtitle =
+      'Any time you can choose but We recommend\nfirst thing in th morning.';
+  static const String pickDayTitle = 'Which day would you\nlike to meditate?';
+  static const String pickDaySubtitle =
+      'Everyday is best, but we recommend picking\nat least five.';
+  static const String everyDay = 'Everyday';
+  static const String noThanks = 'NO THANKS';
+}

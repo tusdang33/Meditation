@@ -4,6 +4,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mediation_app/domain/models/topic/topic_model.dart';
 import 'package:mediation_app/pages/topic/topic_bloc/topic_bloc.dart';
+import 'package:mediation_app/utils/strings.dart';
 import 'package:mediation_app/utils/theme.dart';
 import 'package:mediation_app/widgets/responsive_builder.dart';
 
@@ -67,7 +68,7 @@ class TopicPage extends StatelessWidget {
 }
 
 class _TopicList extends StatelessWidget {
-  const _TopicList({super.key});
+  const _TopicList();
 
   @override
   Widget build(BuildContext context) {
@@ -135,7 +136,7 @@ class _TopicList extends StatelessWidget {
 }
 
 class _TopicHeader extends StatelessWidget {
-  const _TopicHeader({super.key});
+  const _TopicHeader();
 
   @override
   Widget build(BuildContext context) {
@@ -144,15 +145,18 @@ class _TopicHeader extends StatelessWidget {
       children: [
         RichText(
           text: TextSpan(
-            text: 'What Brings you\n',
+            text: TopicPageStrings.title.split('\n').first,
             style: PrimaryFont.bold(28.0).copyWith(height: 1.35),
             children: [
-              TextSpan(text: 'to Silent Moon?', style: PrimaryFont.light(28)),
+              TextSpan(
+                text: TopicPageStrings.title.split('\n').last,
+                style: PrimaryFont.light(28),
+              ),
             ],
           ),
         ),
         const SizedBox(height: 16),
-        Text('choose a topic to focuse on:', style: PrimaryFont.light(20)),
+        Text(TopicPageStrings.subtitle, style: PrimaryFont.light(20)),
       ],
     );
   }

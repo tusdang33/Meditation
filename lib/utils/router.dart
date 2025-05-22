@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mediation_app/data/services/token_service.dart';
 import 'package:mediation_app/di/di_instance.dart';
 import 'package:mediation_app/pages/get_started_page.dart';
 import 'package:mediation_app/pages/login_page/login_page.dart';
+import 'package:mediation_app/pages/set_time_page.dart';
 import 'package:mediation_app/pages/sign_up_page/sign_up_page.dart';
 import 'package:mediation_app/pages/topic/topic_page.dart';
 import 'package:mediation_app/pages/welcome_page.dart';
@@ -15,6 +15,7 @@ class RouteName {
   static const String signUp = '/signUp';
   static const String welcome = '/welcome';
   static const String topic = '/topic';
+  static const String setTime = '/setTime';
   static const publicRoutes = [login, signUp, getStarted, welcome];
 }
 
@@ -22,7 +23,7 @@ class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
   static final router = GoRouter(
-    initialLocation: RouteName.getStarted,
+    initialLocation: RouteName.setTime,
     debugLogDiagnostics: true,
     navigatorKey: _rootNavigatorKey,
     redirect: (context, state) {
@@ -36,7 +37,7 @@ class AppRouter {
         return null;
       }
 
-      return RouteName.topic;
+      return RouteName.setTime;
     },
     routes: [
       GoRoute(
@@ -58,6 +59,10 @@ class AppRouter {
       GoRoute(
         path: RouteName.topic,
         builder: (context, state) => const TopicPage(),
+      ),
+      GoRoute(
+        path: RouteName.setTime,
+        builder: (context, state) => SetTimePage(),
       ),
     ],
   );
